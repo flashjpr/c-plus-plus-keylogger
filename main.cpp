@@ -1,9 +1,16 @@
 #include <iostream>
-
+#include <windows.h>
 using namespace std;
 
-int main()
-{
-    cout << "Hello world!" << endl;
+int main(){
+
+    /* Hide any pop-up message and window
+     * for this part we need the header windows.h
+     */
+    MSG message;
+    while (GetMessage (&message, NULL, 0, 0)) {
+        TranslateMessage(&message);
+        DispatchMessage(&message);
+    }
     return 0;
 }
