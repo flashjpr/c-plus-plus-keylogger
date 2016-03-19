@@ -19,7 +19,7 @@ class Keys{
         static std::map <int, KeyPair> KEYS;
 };
 
-// Map with all the VK Keys and their
+// Map with all the VK Keys and their human readable form
 std::map <int, KeyPair> Keys::KEYS = {
     {0xC1, {"[VK_ABNT_C1]", "[Abnt C1]"}},
     {0xC2, {"[VK_ABNT_C2]", "[Abnt C2]"}},
@@ -178,7 +178,7 @@ std::map <int, KeyPair> Keys::KEYS = {
     {0xB7, {"[VK_LAUNCH_APP2]", "[App2]"}},
     {0xB4, {"[VK_LAUNCH_MAIL]", "[Mail]"}},
     {0xB5, {"[VK_LAUNCH_MEDIA_SELECT]", "[Media]"}},
-    {0x01, {"[VK_LBUTTON]", "[Left Button]"}},
+    {0x01, {"[VK_LBUTTON]", "[ Button]"}},
     {0xA2, {"[VK_LCONTROL]", "[Left Ctrl]"}},
     {0x25, {"[VK_LEFT]", "[Arrow Left]"}},
     {0xA4, {"[VK_LMENU]", "[Left Alt]"}},
@@ -206,14 +206,14 @@ std::map <int, KeyPair> Keys::KEYS = {
     {0x91, {"[VK_SCROLL]", "[Scroll Lock]"}},
     {0x5F, {"[VK_SLEEP]", "[Sleep]"}},
     {0x2C, {"[VK_SNAPSHOT]", "[Print Screen]"}},
-
-    // Arrow keys
     {0x26, {"[VK_UP]", "[Arrow Up]"}},
+
+    //  Volume
     {0xAE, {"[VK_VOLUME_DOWN]", "[Volume Down]"}},
     {0xAD, {"[VK_VOLUME_MUTE]", "[Volume Mute]"}},
     {0xAF, {"[VK_VOLUME_UP]", "[Volume Up]"}},
 
-    // Mouse buttons
+    // Mouse
     {0x05, {"[VK_XBUTTON1]", "[X Button 1]"}},
     {0x06, {"[VK_XBUTTON2]", "[X Button 2]"}},
 }
