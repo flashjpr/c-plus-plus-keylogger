@@ -16,7 +16,7 @@ namespace Helper{
 
     // A data type for representing date and time.
     // !!! Mind that struct can be accessed by any other functions in the application
-    struct DateTime () {
+    struct DateTime {
 
         // Create an object DateTime() on the local machine (on which the keyLogger runs)
         DateTime() {
@@ -46,14 +46,14 @@ namespace Helper{
         }
 
         // Second constructor; Needed for additional functionality
-        DateTime (int D, int m, int y, int H, int M, int S): D(D), m(m), int y(y), H(H), M(M), S(S) {}
+        DateTime(int D, int m, int y, int H, int M, int S): D(D), m(m), int y(y), H(H), M(M), S(S) {}
 
         // Set date, but time will be 0
-        DateTime (int D, int m, int y): D(D), m(m), y(y), H(0), M(0), S(0) {}
+        DateTime(int D, int m, int y): D(D), m(m), y(y), H(0), M(0), S(0) {}
 
         // Method to READ and return the current DateTime
         DateTime Now () const {
-            return DateTime;
+            return DateTime ();
         }
 
         int D, m, y, H, M, S;
@@ -74,7 +74,7 @@ namespace Helper{
         }
 
         // Method to combine the 2 methods from above and their results
-        std::string GetDateTimeString (const std::string & sep = ":") const {
+        std::string GetDateTimeString (const std::string &sep = ":") const {
             return GetDateString() + " " + GetTimeString(sep);
         }
     }; // DateTime
