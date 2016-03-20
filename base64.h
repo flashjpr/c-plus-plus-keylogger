@@ -30,7 +30,7 @@ namespace Base64 {
 		std::string output;
 		int val = 0;
 		int bits = -6;
-		const unsigned int b63 = 0x3F; 
+		const unsigned int b63 = 0x3F;
 
 		for (const auto &c : s) {
 			// Shift left by 8 bits
@@ -42,7 +42,7 @@ namespace Base64 {
 				output.push_back(BASE64_CODES[(val >> bits) & b63]);
 				bits -= 6;
 			}
-		} // for 
+		} // for
 
 		if (bits > -6) {
 			output.push_back(BASE64_CODES[((val << 8) >> (bits + 8)) & b63]);
@@ -55,9 +55,8 @@ namespace Base64 {
 		return output;
 	}
 
-	std::string DecryptB64 (std::string s) {
-
-	}
+   	// DO NOT USE IT YET!
+   	//std::string DecryptB64 (std::string s) {}
 }
 
 #endif // BASE_64

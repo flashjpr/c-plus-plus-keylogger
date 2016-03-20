@@ -5,7 +5,7 @@
 #include <ctime>        //use it for timeouts in mail sending purposes
 #include <string>
 #include <sstream>      // converting various types to string
-
+#include <fstream>
 namespace Helper{
     template <class T>  // instead of "class T" we can use "typedef T"
 
@@ -86,7 +86,7 @@ namespace Helper{
      * type supports the insertion operator "<<"
      * Otherwise, this will not compile.
      */
-    std:: string ToString (const T & e) {
+    std::string ToString (const T & e) {
         // Variable "s" of type output stringstream
         std::ostringstream s;
         s << e;
