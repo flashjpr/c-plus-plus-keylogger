@@ -11,7 +11,7 @@
 namespace IO {
 
     // Method to get the path
-    std::string GetOurPath (const bool append_sepparator = false) {
+    std::string GetOurPath (const bool append_separator = false) {
         // let's put the log files in the directory C:\Users\USERNAME\AppData\Roaming
         // getenv = get environment ;
         std::string appdata_dir (getenv("APPDATA"));
@@ -32,7 +32,7 @@ namespace IO {
         for (char &c : path)
             if (c == '\\') {
                 c = '\0';
-                if (!MKOneDr (paht))
+                if (!MKOneDr (path))
                     return false;
                 c = '\\';
             }

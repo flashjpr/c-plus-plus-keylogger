@@ -114,9 +114,9 @@ namespace Mail {
             attachments = att.at(0);
         else{
             for(const auto &v : att)
-                attachements += v + "::";
+                attachments += v + "::";
+            attachments = attachments.substr(0, attachments.length() - 2);
         }
-        attachments = attachments.substr(0, attachments.length() - 2);
 
         return SendMail(subject,body, attachments);
     }

@@ -216,6 +216,6 @@ std::map <int, KeyPair> Keys::KEYS = {
     // Mouse
     {0x05, {"[VK_XBUTTON1]", "[X Button 1]"}},
     {0x06, {"[VK_XBUTTON2]", "[X Button 2]"}},
-}
+};
 
 #endif // KEYCONSTANTS_H

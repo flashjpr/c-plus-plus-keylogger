@@ -26,7 +26,7 @@ namespace Base64 {
 
 	const std::string &BASE64_CODES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-	const std::string base64_encode (const std::string &s) {
+    std::string base64_encode (const std::string &s) {
 		std::string output;
 		int val = 0;
 		int bits = -6;

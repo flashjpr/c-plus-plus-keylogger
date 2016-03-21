@@ -36,7 +36,7 @@ public:
 
     Timer(const std::function<void(void)> &f ) : funct (f) {}
 
-    Timer(const std::function<void(void)> &f ),
+    Timer(const std::function<void(void)> &f ,
           const unsigned long &i,
           const long repeat = Timer::Infinite) : funct(f),
                                                  interval(std::chrono::milliseconds(i)),
@@ -47,7 +47,7 @@ public:
             return;
         Alive = true;
         repeat_count = CallNumber;
-        if(Asynch)
+        if(Async)
             Thread = std::thread(ThreadFunct, this);
         else
             this->ThreadFunct();
