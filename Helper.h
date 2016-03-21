@@ -6,7 +6,8 @@
 #include <string>
 #include <sstream>      // converting various types to string
 #include <fstream>
-namespace Helper{
+
+namespace Helper {
     template <class T>  // instead of "class T" we can use "typedef T"
 
     // Convert anything to a string using a generic type with a reference to a constant.
