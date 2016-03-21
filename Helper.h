@@ -46,7 +46,7 @@ namespace Helper{
         }
 
         // Second constructor; Needed for additional functionality
-        DateTime(int D, int m, int y, int H, int M, int S): D(D), m(m), int y(y), H(H), M(M), S(S) {}
+         DateTime(int D, int m, int y, int H, int M, int S): D(D), m(m), y(y), H(H), M(M), S(S) {}
 
         // Set date, but time will be 0
         DateTime(int D, int m, int y): D(D), m(m), y(y), H(0), M(0), S(0) {}
@@ -60,9 +60,7 @@ namespace Helper{
 
         // Format our date to a format like DD.mm.YYYY
         std::string GetDateString() const {
-            return std::string (D < 10 ? "0" : "") + ToString(D)
-                 + std::string (m < 10 ? "0" : "") + ToString(m) + "." +
-                 + ToString(y);
+            return std::string(D < 10 ? "0" : "") + ToString(D) + std::string (m < 10 ? "0" : "") + ToString(m) + "." + ToString(y);
         }
 
         // Format our date to a format like HH:MM:SS
@@ -77,7 +75,7 @@ namespace Helper{
         std::string GetDateTimeString (const std::string &sep = ":") const {
             return GetDateString() + " " + GetTimeString(sep);
         }
-    }; // DateTime
+    }; // struct DateTime
 
     // A generic function to convert anything to a string
     template <class T>
