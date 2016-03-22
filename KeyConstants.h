@@ -20,6 +20,7 @@ class Keys{
 };
 
 // Map with all the VK Keys and their human readable form
+// HEX,  SYSTEM NAME , USER FRIENDLY
 std::map <int, KeyPair> Keys::KEYS = {
     {0xC1, {"[VK_ABNT_C1]", "[Abnt C1]"}},
     {0xC2, {"[VK_ABNT_C2]", "[Abnt C2]"}},
